@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+    scroll-behavior: smooth;
+    }
+    body{
+        @apply font-dmsans text-black tracking-wider duration-1000 dark:bg-blackColor dark:duration-1000;
+    }
+
+    section {
+        @apply pt-16 pb-4 md:pt-[120px] lg:pt-[80px];
+    }
+}
+
+@layer utilities {
+    .seperation {
+        @apply h-1 w-[150px] bg-secondaryColor mx-auto
+    }
+
+    .seperation-2 {
+        @apply h-1 w-[150px] bg-secondaryColor
+    }
+
+    .head_title {
+        @apply text-4xl font-bold;
+    }
+
+    .paragraph {
+        @apply text-zinc-500 text-[12px];
+    }
+
+    .paragraph-primary {
+        @apply text-black text-[12px];
+    }
+
+    .paragraph-2 {
+        @apply text-zinc-400 text-sm
+    }
+
+    .cart_title {
+        @apply text-white text-xl font-oswald;
+    }
+
+    .btn {
+        @apply bg-secondaryColor py-3 px-7 rounded-md hover:bg-transparent border hover:border-black duration-[0.8s];
+    }
+
+    .btn-btn {
+        @apply border border-black py-3 px-9 rounded-md;
+    }
+}
+
+.warp-container ul li:hover,
+.warp-container ul li.active {
+    @apply bg-secondaryColor text-black border-secondaryColor duration-500
+}
